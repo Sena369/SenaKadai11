@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KadaiChallenge11" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="kJH-F9-AeB">
+                                <rect key="frame" x="30" y="74" width="161.5" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="都道府県" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXP-ia-Hxg">
+                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSr-xg-Q74">
+                                        <rect key="frame" x="109.5" y="0.0" width="52" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r17-RG-gc2">
+                                <rect key="frame" x="291.5" y="69" width="53" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="変更"/>
+                                <connections>
+                                    <action selector="changePrefecturesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WQZ-pm-Tdx"/>
+                                    <segue destination="8dL-U6-TqU" kind="presentation" modalPresentationStyle="fullScreen" id="gpS-hk-2UJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r17-RG-gc2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kJH-F9-AeB" secondAttribute="trailing" constant="8" symbolic="YES" id="9gy-ir-5ap"/>
+                            <constraint firstItem="kJH-F9-AeB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="KgB-t9-olD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r17-RG-gc2" secondAttribute="trailing" constant="69.5" id="RZA-BM-ZQz"/>
+                            <constraint firstItem="r17-RG-gc2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="WVZ-ot-yx4"/>
+                            <constraint firstItem="kJH-F9-AeB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="bYX-Ia-I0I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectedPrefecturesLabel" destination="SSr-xg-Q74" id="bZH-LT-2f4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="88"/>
+        </scene>
+        <!--都道府県-->
+        <scene sceneID="kKG-dR-705">
+            <objects>
+                <viewController id="3cj-hk-N8E" customClass="SelectionPrefecturesViewController" customModule="KadaiChallenge11" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RNO-ph-uQH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f84-d1-CHz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mPW-ER-Bbd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mPW-ER-Bbd" firstAttribute="trailing" secondItem="f84-d1-CHz" secondAttribute="trailing" id="SkR-cn-tFL"/>
+                            <constraint firstItem="f84-d1-CHz" firstAttribute="top" secondItem="mPW-ER-Bbd" secondAttribute="top" id="uzi-4i-beY"/>
+                            <constraint firstItem="mPW-ER-Bbd" firstAttribute="bottom" secondItem="f84-d1-CHz" secondAttribute="bottom" id="v1B-Cc-1NP"/>
+                            <constraint firstItem="f84-d1-CHz" firstAttribute="leading" secondItem="mPW-ER-Bbd" secondAttribute="leading" id="vim-II-PSI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="都道府県" id="eq7-Lg-tq1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="f1S-Cx-1Hf">
+                            <connections>
+                                <action selector="cancelButton:" destination="3cj-hk-N8E" id="kkl-St-hpd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="f84-d1-CHz" id="fR1-kn-4un"/>
+                        <segue destination="pJi-kR-NNM" kind="unwind" identifier="exitFromSelectionPrefecturesSegue" unwindAction="exitFromSelectionPrefecturesSegueWithSegue:" id="olM-Lv-1W9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EHs-YY-RrV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="pJi-kR-NNM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2039.1304347826087" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UwN-aR-YAf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8dL-U6-TqU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5hv-MH-WMt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3cj-hk-N8E" kind="relationship" relationship="rootViewController" id="0V7-ei-Z2W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qEK-AL-vFJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="835" y="93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
