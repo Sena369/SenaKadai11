@@ -27,6 +27,9 @@ class SelectionPrefecturesViewController: UIViewController, UITableViewDelegate,
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "PrefecturesTableViewCell",
+                                 bundle: nil),
+                           forCellReuseIdentifier: "PrefecturesTableViewCell")
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,9 +37,6 @@ class SelectionPrefecturesViewController: UIViewController, UITableViewDelegate,
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(UINib(nibName: "PrefecturesTableViewCell",
-                                 bundle: nil),
-                           forCellReuseIdentifier: "PrefecturesTableViewCell")
         let cell = tableView.dequeueReusableCell(withIdentifier: "PrefecturesTableViewCell", for: indexPath)
         // swiftlint:disable:next force_cast
         as! PrefecturesTableViewCell
