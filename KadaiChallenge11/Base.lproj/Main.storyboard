@@ -38,7 +38,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="変更"/>
                                 <connections>
-                                    <action selector="changePrefecturesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WQZ-pm-Tdx"/>
                                     <segue destination="8dL-U6-TqU" kind="presentation" modalPresentationStyle="fullScreen" id="gpS-hk-2UJ"/>
                                 </connections>
                             </button>
@@ -86,7 +85,7 @@
                     <navigationItem key="navigationItem" title="都道府県" id="eq7-Lg-tq1">
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="f1S-Cx-1Hf">
                             <connections>
-                                <action selector="cancelButton:" destination="3cj-hk-N8E" id="kkl-St-hpd"/>
+                                <action selector="cancelButton:" destination="3cj-hk-N8E" id="kTm-Uy-pbw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
