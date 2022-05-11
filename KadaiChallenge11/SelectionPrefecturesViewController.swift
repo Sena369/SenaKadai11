@@ -50,6 +50,7 @@ class SelectionPrefecturesViewController: UIViewController, UITableViewDelegate,
     }
 
     @IBAction private func cancelButton(_ sender: Any) {
-        dismiss(animated: true)
+        selectedPrefectures = nil
+        performSegue(withIdentifier: "exitFromSelectionPrefecturesSegue", sender: nil)
     }
 }

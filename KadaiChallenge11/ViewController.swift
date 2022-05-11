@@ -9,12 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet private weak var selectedPrefecturesLabel: UILabel!
-    @IBAction private func changePrefecturesButton(_ sender: Any) {
-    }
 
     @IBAction private func exitFromSelectionPrefecturesSegue(segue: UIStoryboardSegue) {
         if let nextVC = segue.source as? SelectionPrefecturesViewController {
-            selectedPrefecturesLabel.text = nextVC.selectedPrefectures
+            guard let selectedPrefectures = nextVC.selectedPrefectures else { return }
+            selectedPrefecturesLabel.text = selectedPrefectures
         }
     }
 }
